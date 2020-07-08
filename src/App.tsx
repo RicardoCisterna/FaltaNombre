@@ -1,25 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {Route} from 'react-router'
+import Login from './containers/auth/Login'
+import Register from './containers/auth/Register'
+import NewsFeed from './containers/NewsFeed'
+import NavBar from './components/NavBar'
+import Profile from './containers/Users/Profile'
+
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <div>
+     <Route component={NavBar} path='/app' exact={false}  />
+     <Route component={Login} path='/' exact={true}/>
+     <Route component={Register} path='/Register' exact={true}/>
+     <Route component={NewsFeed} path='/app/newsfeed' exact={true} />
+     <Route component={Profile} path='/app/user/profile' exact={true}  />
+     
+   </div>
   );
 }
 
