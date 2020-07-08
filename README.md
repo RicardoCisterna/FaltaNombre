@@ -1,6 +1,6 @@
 # FaltaNombre
 memes
 
-Pagina realizada con Reactcon typescript y firebase
+Pagina realizada con React, typescript y firebase
 
 
